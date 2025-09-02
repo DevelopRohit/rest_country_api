@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="body">
+        <header>
+            <div class="heading">
+                <h1>Where in the world?</h1>
+            </div>
+            <button class="mode">Ligth Mode</button>
+        </header>
+        <div class="container">
+            <nav>
+                <div>
+                    <label for="country">Search for Country</label>
+                    <input type="text" id="country">
+                    <button class="Searchbtn"> <img src="search.svg" alt=""></button>
+                </div>
+                <select id="region">
+                    <option value="">Filter by Region</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Americas">Americas</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+            </nav>
+            <div class="countydata">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="data.json"></script>
+</body>
+
+</html>

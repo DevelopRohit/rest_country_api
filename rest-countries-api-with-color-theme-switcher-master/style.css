@@ -1,0 +1,204 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    background-color: white;
+}
+
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    align-items: center;
+}
+
+h1 {
+    margin-left: 40px;
+}
+
+.container {
+    margin-top: 7px;
+}
+
+.mode {
+    margin-right: 40px;
+    width: 100px;
+    height: 25px;
+    background-color: #d4b8ff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: medium;
+    border: none;
+    color: white;
+}
+.input-box {
+  position: relative;
+  display: inline-block;
+}
+
+#country {
+  width: 250px;
+  padding: 12px 10px;
+  margin: 20px;
+  border: 1px solid;
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+#country:focus {
+  outline:1px solid black;
+}
+
+/* Floating Label */
+label {
+  position: absolute;
+  left: 30px;
+  top: 79px;
+  color: gray;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.3s ease all;
+  background-color: white;
+  padding: 0 4px;
+}
+
+#country:focus + label {
+  top: 10px;
+  left: 28px;
+  font-size: 12px;
+  color: #333;
+}
+
+#region {
+    width: 150px;
+    padding: 7px;
+    height: 35px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(53, 52, 52, 0.2);
+    border: 1px solid;
+    margin-right: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+select:focus {
+    outline: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.countydata {
+    width: 90%;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-inline: auto;
+}
+
+.countryinfo {
+    background-color: white;
+    width: 15vw;
+    border-radius: 10px;
+    height: fit-content;
+    box-shadow: 5px 5px 10px rgba(195, 187, 187, 0.2);
+
+}
+
+
+.countryinfo img {
+    width: 15vw;
+
+}
+
+h3 {
+    margin: 10px;
+}
+
+.info {
+    margin: 10px;
+}
+
+p {
+    margin: 5px;
+    font-size: medium;
+}
+
+.Searchbtn {
+    background-color: rgb(189, 181, 181);
+    padding: 3px;
+    font-weight: bold;
+    border: none;
+    color: aliceblue;
+    cursor: pointer;
+    margin-left: -15px;
+    width: 40px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.Searchbtn img {
+    height: 20px;
+}
+
+
+@media(max-width:600px){
+    body{
+        font-size: 5vw;
+    }
+    header{
+        width:auto;
+    }
+    .mode{
+        font-size: small;
+    }
+    h1{
+        font-size: medium;
+    }
+    #country{
+        width: 100px;
+        height: 2px;
+        font-size: small;
+    }
+    label{
+        font-size: x-small;
+        top: 70px;
+    }
+    .Searchbtn img{
+        height: 10px;
+    }
+    .Searchbtn{
+        width: 20px;
+        height: 20px;
+    }
+    #region{
+        width: 100px;
+        padding: 5px;
+        height: 25px;
+        font-size: 3vw;
+        margin-right: 40px;
+    }
+    .countydata{
+        flex-wrap: wrap;
+    }
+    
+    .countryinfo{
+        height:fit-content;
+        width: 100%;
+    }
+    .countryinfo img{
+        width: 100%;
+    }
+}
