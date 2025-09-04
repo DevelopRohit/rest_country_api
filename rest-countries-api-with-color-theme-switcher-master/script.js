@@ -51,7 +51,7 @@ function showallcountry(cou) {
     flags.forEach(flag => {
         flag.addEventListener("click", () => {
             let country = flag.dataset.country
-            window.location.href=`details.html?${country}`
+            window.location.href=`details.html?country=${country}`
         });
     });
 };
