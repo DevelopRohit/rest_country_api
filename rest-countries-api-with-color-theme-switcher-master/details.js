@@ -3,7 +3,7 @@ let countryname = params.get("country");
 
 async function getCountryDetails() {
     let res = await fetch(`https://restcountries.com/v3.1/name/${countryname}?fullText=true`)
-    let deta = await res.json()
+    let data = await res.json()
 
     let country = data[0];
 
