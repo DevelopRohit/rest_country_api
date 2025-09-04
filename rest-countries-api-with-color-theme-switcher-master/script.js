@@ -17,35 +17,44 @@ serchbtn.addEventListener("click", () => {
     countydata.innerHTML = "";
 
     showallcountry(filtered)
-})
+});
 async function getdata() {
     let url = await fetch("data.json")
     let res = await url.json()
     allcountry = res
+    console.log(res);
 
     showallcountry(allcountry)
-}
+};
 
 function showallcountry(cou) {
+    countydata.innerHTML = "";
+
     cou.forEach(all => {
         let allblock = document.createElement("div");
-        allblock.classList.add("countryinfo")
+        allblock.classList.add("countryinfo");
 
         allblock.innerHTML = `
-                        <img src="${all.flags.png}" alt="">
-                        <h3>${all.name}</h3>
-                        <div class="info">
-                        <p>Population :${all.population}</p>
-                        <p>Region :${all.region}</p>
-                        
-                        <p>Capital : ${all.capital}</p>
-                        </div>
+            <img src="${all.flags.png}" alt="${all.name} "class="flag" 
+            data-country="${all.name}">
+            <h3>${all.name}</h3>
+            <div class="info">
+                <p>Population : ${all.population}</p>
+                <p>Region : ${all.region}</p>
+                <p>Capital : ${all.capital}</p>
+            </div>
+        `;
+        countydata.appendChild(allblock);
+    }); 
 
-    `
-        countydata.appendChild(allblock)
-
+    let flags = document.querySelectorAll(".flag");
+    flags.forEach(flag => {
+        flag.addEventListener("click", () => {
+            let country = flag.dataset.country
+            window.location.href=`details.html?${country}`
+        });
     });
-}
+};
 
 
 btn.addEventListener("click", () => {
